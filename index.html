@@ -66,26 +66,32 @@ h2.sub{
   margin-bottom:30px;
 }
 .nav-tab{
-  background:linear-gradient(180deg,rgba(255,255,255,0.92) 0%,rgba(220,230,245,0.88) 100%);
-  color:#1a2e4a;
+  background:linear-gradient(180deg,#ffe566 0%,#f0c93a 45%,#c9a84c 100%);
+  color:#3a2a08;
   padding:9px 22px;
   font-size:0.97rem;
   font-weight:600;
   letter-spacing:0.3px;
   text-decoration:none;
   border-radius:6px;
-  border:1px solid rgba(255,255,255,0.6);
-  box-shadow:0 3px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.9);
+  border:1px solid #e6c04a;
+  box-shadow:0 3px 8px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,200,0.7);
   transition:all 0.18s ease;
   cursor:pointer;
   font-family:'Times New Roman',Times,serif;
-  text-shadow:0 1px 0 rgba(255,255,255,0.6);
+  text-shadow:0 1px 0 rgba(255,255,200,0.45);
+  animation:navBlink 1.5s ease-in-out infinite;
 }
 .nav-tab:hover{
-  background:linear-gradient(180deg,#ffffff 0%,rgba(230,240,255,0.95) 100%);
-  box-shadow:0 5px 14px rgba(0,0,0,0.4),inset 0 1px 0 #fff;
+  background:linear-gradient(180deg,#fff0a0 0%,#f5d45a 45%,#d4b04e 100%);
+  box-shadow:0 5px 14px rgba(0,0,0,0.4),0 0 16px rgba(255,220,80,0.7),inset 0 1px 0 #fff8c8;
   transform:translateY(-1px);
-  color:#0e3a6e;
+  color:#2a1e05;
+  animation:none;
+}
+@keyframes navBlink{
+  0%,100%{opacity:1;box-shadow:0 3px 8px rgba(0,0,0,0.35),0 0 4px rgba(255,220,80,0.35),inset 0 1px 0 rgba(255,255,200,0.7)}
+  50%{opacity:0.78;box-shadow:0 3px 12px rgba(0,0,0,0.4),0 0 18px 3px rgba(255,230,100,0.85),inset 0 1px 0 rgba(255,255,200,0.9)}
 }
 /* badges */
 .badges-container{
@@ -196,8 +202,8 @@ details[open] summary::after{transform:rotate(-180deg)}
 .booking-steps{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
 .booking-steps li{display:flex;gap:12px;align-items:flex-start;font-size:0.9rem}
 .step-num{min-width:26px;height:26px;background:rgba(255,255,255,0.85);color:#111;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:bold;flex-shrink:0;margin-top:1px}
-.calendly-embed-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.18);border-radius:8px;overflow:hidden;min-height:700px}
-.calendly-embed-box iframe{width:100%;height:700px;min-height:700px;border:none;display:block}
+.calendly-embed-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.18);border-radius:8px;overflow:hidden;min-height:580px}
+.calendly-embed-box iframe{width:100%;min-height:580px;border:none;display:block}
 /* Pricing */
 .pricing-container{background:rgba(255,255,255,0.06);border-radius:10px;padding:28px;max-width:860px;margin:0 auto}
 .pricing-container h3{color:#e0d0a0;border-bottom:2px solid #c9a84c;padding-bottom:6px;margin-top:32px;margin-bottom:14px;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.5px}
@@ -224,6 +230,35 @@ details[open] summary::after{transform:rotate(-180deg)}
   font-family:'Times New Roman',Times,serif;
 }
 .booking-pill-btn:hover{background:#fff;color:#051d3b}
+.booking-agree-box{
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(201,168,76,0.55);
+  border-radius:8px;
+  padding:14px 16px;
+  margin-bottom:14px;
+}
+.booking-agree-box label{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  cursor:pointer;
+  font-size:0.88rem;
+  line-height:1.55;
+  color:rgba(255,255,255,0.95);
+}
+.booking-agree-box input[type="checkbox"]{
+  width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:#c9a84c;cursor:pointer;
+}
+.calendly-locked{pointer-events:none;opacity:0.4;filter:grayscale(0.3)}
+.calendly-hint{font-size:0.82rem;color:#f0d78a;margin-bottom:10px;display:none}
+.form-agree{margin:4px 0 14px;display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;line-height:1.5;color:rgba(255,255,255,0.9)}
+.form-agree input[type="checkbox"]{width:16px;height:16px;min-width:16px;margin-top:2px;accent-color:#c9a84c;cursor:pointer}
+.disclaimer-block{margin-bottom:28px}
+.disclaimer-block h3{color:#e0d0a0;font-size:1.05rem;margin-bottom:12px;letter-spacing:0.3px}
+.disclaimer-block p,.disclaimer-block li{font-size:0.92rem;line-height:1.7;margin-bottom:10px;color:rgba(255,255,255,0.92)}
+.disclaimer-block ul{padding-left:18px;margin-bottom:12px}
+.disclaimer-block li{margin-bottom:8px}
+.disclaimer-note{font-size:0.82rem;color:rgba(255,255,255,0.65);font-style:italic;margin-top:8px}
 /* badge SVGs */
 .badge-svg{width:52px;height:52px;margin-bottom:8px;filter:drop-shadow(0 3px 5px rgba(0,0,0,0.35))}
 /* mobile */
@@ -263,6 +298,7 @@ details[open] summary::after{transform:rotate(-180deg)}
       <button class="nav-tab" onclick="showSection('contact')">Contact</button>
       <button class="nav-tab" onclick="showSection('faq')">FAQ</button>
       <button class="nav-tab" onclick="showSection('pricing')">Pricing &amp; Fees</button>
+      <button class="nav-tab" onclick="showSection('legal')">Legal Disclaimers</button>
     </nav>
   </div>
 
@@ -416,8 +452,17 @@ details[open] summary::after{transform:rotate(-180deg)}
         </ul>
         <p style="font-size:0.88rem;color:rgba(255,255,255,0.75)">Questions first? Call <a href="tel:2136513631" style="color:#c9a84c;text-decoration:none">213-651-3631</a> or email <a href="mailto:IDme@fypnotary.com" style="color:#c9a84c;text-decoration:none">IDme@fypnotary.com</a></p>
       </div>
-      <div class="calendly-embed-box">
-        <iframe src="https://calendly.com/d/dtt9-pk7-49p?background_color=051d3b&text_color=ffffff&primary_color=c9a84c" frameborder="0" scrolling="no" loading="lazy"></iframe>
+      <div>
+        <div class="booking-agree-box">
+          <label>
+            <input type="checkbox" id="bookingPolicyCheck" onchange="toggleCalendly(this.checked)">
+            <span>I agree to the Legal &amp; Booking Policies: I understand that the Notary is not an attorney and cannot provide legal advice or assist with document selection. I agree to the fee schedule, including the $15 late/wait fee ($15 per 30 minutes for jail visits), the $50 Sunday fee, and acknowledge that my upfront deposit is non-refundable if the signing fails due to invalid ID, incomplete documents, or a signer's lack of capacity.</span>
+          </label>
+        </div>
+        <p class="calendly-hint" id="calendlyHint">Please check the box above to unlock the booking calendar.</p>
+        <div class="calendly-embed-box calendly-locked" id="calendlyBox">
+          <iframe src="https://calendly.com/d/dtt9-pk7-49p?background_color=051d3b&text_color=ffffff&primary_color=c9a84c" frameborder="0" scrolling="no" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -458,7 +503,11 @@ details[open] summary::after{transform:rotate(-180deg)}
           </select>
         </div>
         <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your documents and any scheduling needs…"></textarea></div>
-        <button class="form-submit" onclick="this.textContent='Message Sent ✓';this.style.background='rgba(255,255,255,0.6)';setTimeout(()=>{this.textContent='Send Message';this.style.background=''},3000)">Send Message</button>
+        <label class="form-agree">
+          <input type="checkbox" id="contactPolicyCheck">
+          <span>I understand that the notary is not an attorney and cannot provide legal advice, and I agree to the cancellation, deposit, and late fee policies.</span>
+        </label>
+        <button class="form-submit" onclick="submitContact(this)">Send Message</button>
       </div>
     </div>
   </div>
@@ -581,6 +630,35 @@ details[open] summary::after{transform:rotate(-180deg)}
   </div>
 </div>
 
+<!-- ══════════ LEGAL DISCLAIMERS ══════════ -->
+<div class="section" id="legal">
+  <div class="section-inner">
+    <button class="back-btn" onclick="goHome()">← Back to Home</button>
+    <h2>Legal Disclaimers</h2>
+    <div class="gold-line"></div>
+
+    <div class="disclaimer-block">
+      <h3>Important Appointment Requirements &amp; Legal Notice</h3>
+      <p>Thank you for booking your appointment! To ensure a smooth and successful signing, please review the critical legal and operational policies below:</p>
+      <ul>
+        <li><strong>Bring Valid, Unexpired Government ID:</strong> All signers must present an unexpired, government-issued photo ID (such as a Driver's License or Passport). Digital IDs or photos of IDs cannot be accepted.</li>
+        <li><strong>Complete Your Documents Ahead of Time:</strong> Please ensure all forms are completely filled out except for the signatures and initials, which must be executed in front of the notary.</li>
+        <li><strong>Legal Notice (UPL):</strong> By law, a Virginia Notary Public is an impartial witness and not an attorney. I am strictly prohibited from giving legal advice, interpreting your documents, or helping you choose or fill out legal forms. If you have questions about your paperwork, please consult a licensed attorney prior to our meeting.</li>
+        <li><strong>Late &amp; Wait Policies:</strong> Out of respect for all clients, appointments operate on a strict schedule. A $15 late fee applies after 10 minutes. For mobile or specialty facility visits (including jails), a wait fee of $15 per 30 minutes will be assessed for any delays.</li>
+        <li><strong>Sunday Bookings:</strong> Please note that appointments scheduled on Sundays are subject to a $50 specialty service fee.</li>
+        <li><strong>Cancellation/Forfeiture Policy:</strong> If your appointment cannot be completed because a signer lacks proper identification, lacks the mental capacity or willingness to sign, or paperwork is missing, your upfront booking deposit will be forfeited.</li>
+      </ul>
+    </div>
+
+    <div class="disclaimer-block">
+      <h3>Notary Is Not an Attorney</h3>
+      <p>Finding Your Place Notary, LLC and its commissioned notary provide notarization services only. The notary is not an attorney, cannot provide legal advice, cannot assist with document selection, and cannot help you fill out or interpret legal forms. For legal questions, please consult a licensed attorney.</p>
+    </div>
+
+    <button class="booking-pill-btn" onclick="showSection('appointment')">Book An Appointment</button>
+  </div>
+</div>
+
 <script>
 // Embed logo as base64
 (function(){
@@ -599,6 +677,25 @@ function goHome(){
   document.getElementById('heroPage').style.display='flex';
   window.scrollTo(0,0);
 }
+function toggleCalendly(on){
+  var box=document.getElementById('calendlyBox');
+  var hint=document.getElementById('calendlyHint');
+  if(on){box.classList.remove('calendly-locked');hint.style.display='none';}
+  else{box.classList.add('calendly-locked');hint.style.display='block';}
+}
+function submitContact(btn){
+  if(!document.getElementById('contactPolicyCheck').checked){
+    alert('Please confirm you understand the notary is not an attorney and agree to the cancellation, deposit, and late fee policies.');
+    return;
+  }
+  btn.textContent='Message Sent \u2713';
+  btn.style.background='rgba(255,255,255,0.6)';
+  setTimeout(function(){btn.textContent='Send Message';btn.style.background='';},3000);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var hint=document.getElementById('calendlyHint');
+  if(hint) hint.style.display='block';
+});
 </script>
 </body>
 </html>
