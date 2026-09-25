@@ -19,13 +19,11 @@ html,body{
 /* ── HERO (full-screen landing) ── */
 .hero{
   min-height:100vh;
-  height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   align-items:center;
-  padding:18px 16px 14px;
-  overflow:hidden;
+  padding:28px 20px 16px;
 }
 .main-container{
   display:flex;
@@ -33,28 +31,27 @@ html,body{
   align-items:center;
   text-align:center;
   width:100%;
-  max-width:1100px;
-  flex-shrink:1;
+  max-width:900px;
 }
-.logo-box{margin-bottom:8px}
-.logo-box img{max-height:110px;width:auto}
+.logo-box{margin-bottom:14px}
+.logo-box img{max-height:145px;width:auto}
 h1{
-  font-size:1.85rem;
+  font-size:2.2rem;
   letter-spacing:2px;
   font-weight:bold;
   text-transform:uppercase;
-  margin-bottom:6px;
+  margin-bottom:10px;
   text-shadow:2px 2px 4px rgba(0,0,0,0.5);
 }
 h2.sub{
-  font-size:1.25rem;
+  font-size:1.6rem;
   font-style:italic;
   font-weight:normal;
-  margin-bottom:6px;
+  margin-bottom:12px;
 }
 .contact-info{
-  font-size:1.05rem;
-  margin-bottom:14px;
+  font-size:1.2rem;
+  margin-bottom:22px;
   letter-spacing:0.5px;
 }
 .contact-info a{color:#fff;text-decoration:none}
@@ -63,19 +60,18 @@ h2.sub{
 .nav-menu{
   display:flex;
   justify-content:center;
-  align-items:center;
-  gap:8px;
-  flex-wrap:nowrap;
+  gap:12px;
+  flex-wrap:wrap;
   width:100%;
-  margin-bottom:12px;
+  margin-bottom:18px;
 }
 .nav-tab{
   background:linear-gradient(180deg,#ffe566 0%,#f0c93a 45%,#c9a84c 100%);
   color:#3a2a08;
-  padding:7px 12px;
-  font-size:0.82rem;
+  padding:9px 22px;
+  font-size:0.97rem;
   font-weight:600;
-  letter-spacing:0.2px;
+  letter-spacing:0.3px;
   text-decoration:none;
   border-radius:6px;
   border:1px solid #e6c04a;
@@ -85,8 +81,6 @@ h2.sub{
   font-family:'Times New Roman',Times,serif;
   text-shadow:0 1px 0 rgba(255,255,200,0.45);
   animation:navBlink 1.5s ease-in-out infinite;
-  white-space:nowrap;
-  flex:0 1 auto;
 }
 .nav-tab:hover{
   background:linear-gradient(180deg,#fff0a0 0%,#f5d45a 45%,#d4b04e 100%);
@@ -104,27 +98,26 @@ h2.sub{
   display:flex;
   justify-content:center;
   align-items:flex-end;
-  gap:22px;
+  gap:36px;
   width:100%;
   max-width:1000px;
-  padding-bottom:4px;
-  flex-wrap:nowrap;
-  flex-shrink:0;
+  padding-bottom:6px;
+  flex-wrap:wrap;
 }
 .badge-item{
   display:flex;
   flex-direction:column;
   align-items:center;
   text-align:center;
-  font-size:0.68rem;
+  font-size:0.75rem;
   font-weight:bold;
-  letter-spacing:0.4px;
+  letter-spacing:0.5px;
   text-transform:uppercase;
 }
 .badge-item img{
-  max-height:48px;
+  max-height:55px;
   width:auto;
-  margin-bottom:5px;
+  margin-bottom:8px;
   filter:drop-shadow(0 3px 5px rgba(0,0,0,0.3));
 }
 /* ── SECTIONS ── */
@@ -267,9 +260,9 @@ details[open] summary::after{transform:rotate(-180deg)}
 .disclaimer-block li{margin-bottom:8px}
 .disclaimer-note{font-size:0.82rem;color:rgba(255,255,255,0.65);font-style:italic;margin-top:8px}
 .va-notice{
-  max-width:820px;margin:0 auto 10px;padding:8px 14px;
+  max-width:820px;margin:0 auto 14px;padding:10px 16px;
   background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.55);
-  border-radius:8px;font-size:0.82rem;line-height:1.45;color:rgba(255,255,255,0.95);text-align:left;
+  border-radius:8px;font-size:0.88rem;line-height:1.55;color:rgba(255,255,255,0.95);text-align:left;
 }
 .scope-box{
   background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);
@@ -289,29 +282,21 @@ details[open] summary::after{transform:rotate(-180deg)}
 .lang-policy{margin-top:8px;padding-top:16px;border-top:1px solid rgba(201,168,76,0.35)}
 .lang-policy h4{color:#e0d0a0;font-size:1rem;margin-bottom:8px;letter-spacing:0.3px}
 /* badge SVGs */
-.badge-svg{width:44px;height:44px;margin-bottom:5px;filter:drop-shadow(0 3px 5px rgba(0,0,0,0.35))}
+.badge-svg{width:50px;height:50px;margin-bottom:7px;filter:drop-shadow(0 3px 5px rgba(0,0,0,0.35))}
 /* mobile */
 @media(max-width:768px){
-  .hero{height:auto;min-height:100vh;overflow:visible;padding:20px 14px 16px}
-  h1{font-size:1.45rem}
-  h2.sub{font-size:1.1rem}
-  .contact-info{font-size:0.95rem;margin-bottom:12px}
-  .logo-box img{max-height:90px}
-  .nav-menu{flex-wrap:wrap;gap:6px}
-  .nav-tab{padding:7px 10px;font-size:0.78rem}
-  .badges-container{gap:12px;flex-wrap:wrap}
-  .badge-item img,.badge-svg{max-height:40px;width:40px}
+  h1{font-size:1.6rem}
+  h2.sub{font-size:1.2rem}
+  .contact-info{font-size:1rem}
+  .badges-container{gap:20px}
+  .badge-item img,.badge-svg{max-height:45px;width:45px}
   .about-grid,.contact-grid,.booking-wrap{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .section{padding:40px 16px 32px}
 }
-@media(max-width:1100px){
-  .nav-menu{flex-wrap:wrap}
-  .nav-tab{padding:7px 11px;font-size:0.8rem}
-}
 @media(max-width:480px){
-  .nav-menu{gap:6px}
-  .nav-tab{padding:7px 10px;font-size:0.76rem}
+  .nav-menu{gap:8px}
+  .nav-tab{padding:8px 14px;font-size:0.88rem}
 }
 </style>
 </head>
@@ -334,8 +319,8 @@ details[open] summary::after{transform:rotate(-180deg)}
       <button class="nav-tab" onclick="showSection('appointment')">Book Appointment</button>
       <button class="nav-tab" onclick="showSection('contact')">Contact</button>
       <button class="nav-tab" onclick="showSection('faq')">FAQ</button>
-      <button class="nav-tab" onclick="showSection('legal')">Legal Disclaimers</button>
       <button class="nav-tab" onclick="showSection('pricing')">Pricing &amp; Fees</button>
+      <button class="nav-tab" onclick="showSection('legal')">Legal Disclaimers</button>
     </nav>
     <div class="va-notice">To comply with Virginia Notary standards, all signers must be able to communicate directly with the notary in English. We are unable to utilize third-party translators or interpreters.</div>
   </div>
