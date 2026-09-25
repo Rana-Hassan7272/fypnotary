@@ -259,6 +259,28 @@ details[open] summary::after{transform:rotate(-180deg)}
 .disclaimer-block ul{padding-left:18px;margin-bottom:12px}
 .disclaimer-block li{margin-bottom:8px}
 .disclaimer-note{font-size:0.82rem;color:rgba(255,255,255,0.65);font-style:italic;margin-top:8px}
+.va-notice{
+  max-width:820px;margin:0 auto 22px;padding:12px 16px;
+  background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.55);
+  border-radius:8px;font-size:0.88rem;line-height:1.55;color:rgba(255,255,255,0.95);text-align:left;
+}
+.scope-box{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);
+  border-radius:10px;padding:24px 26px;margin-top:28px;max-width:860px;margin-left:auto;margin-right:auto;
+}
+.scope-box h3{color:#e0d0a0;font-size:1.1rem;margin-bottom:12px;letter-spacing:0.3px}
+.scope-box > p{font-size:0.92rem;line-height:1.7;margin-bottom:14px;color:rgba(255,255,255,0.92)}
+.scope-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin:0 0 22px}
+.scope-list li{font-size:0.92rem;line-height:1.65;color:rgba(255,255,255,0.92)}
+.scope-list strong{color:#e0d0a0}
+.scope-img{display:block;margin-top:8px;max-height:56px;width:auto;object-fit:contain;border-radius:4px}
+.scope-img.seal{max-height:88px}
+.inline-law{height:28px;width:auto;vertical-align:middle;margin-left:6px;display:inline-block}
+.disc-img{display:block;margin:10px 0 6px;max-height:64px;width:auto;object-fit:contain;border-radius:4px}
+.disc-img.seal{max-height:96px}
+.disc-img.inline-end{display:inline-block;height:30px;width:auto;vertical-align:middle;margin:0 0 0 8px}
+.lang-policy{margin-top:8px;padding-top:16px;border-top:1px solid rgba(201,168,76,0.35)}
+.lang-policy h4{color:#e0d0a0;font-size:1rem;margin-bottom:8px;letter-spacing:0.3px}
 /* badge SVGs */
 .badge-svg{width:52px;height:52px;margin-bottom:8px;filter:drop-shadow(0 3px 5px rgba(0,0,0,0.35))}
 /* mobile */
@@ -300,6 +322,7 @@ details[open] summary::after{transform:rotate(-180deg)}
       <button class="nav-tab" onclick="showSection('pricing')">Pricing &amp; Fees</button>
       <button class="nav-tab" onclick="showSection('legal')">Legal Disclaimers</button>
     </nav>
+    <div class="va-notice">To comply with Virginia Notary standards, all signers must be able to communicate directly with the notary in English. We are unable to utilize third-party translators or interpreters.</div>
   </div>
 
   <!-- Badges -->
@@ -391,7 +414,7 @@ details[open] summary::after{transform:rotate(-180deg)}
         <ul style="margin-top:12px">
           <li>Remote Online Notary (RON) — State Commissioned</li>
           <li>Certified Loan Signing Agent (LSA)</li>
-          <li>Errors &amp; Omissions (E&amp;O) Insurance Coverage</li>
+          <li>Errors &amp; Omissions (E&amp;O) Insurance Coverage — $100,000 Insured</li>
           <li>NNA Background Screened &amp; Certified Member</li>
           <li>ID Verification &amp; Anti-Fraud Trained</li>
         </ul>
@@ -429,7 +452,22 @@ details[open] summary::after{transform:rotate(-180deg)}
       </div>
       <div class="service-card">
         <h3>Loan Signing Agent (LSA)</h3>
-        <p>As a Certified LSA, Julia guides borrowers through entire loan packages, ensuring every page is signed, initialed, and dated correctly.</p>
+        <p>As a Certified LSA, Julia professionally navigates the layout of entire loan packages, meticulously ensuring every single page is signed, initialed, and dated correctly in complete compliance with lender instructions.</p>
+      </div>
+    </div>
+
+    <div class="scope-box">
+      <h3>Authorized Services &amp; Scope of Authority</h3>
+      <p>Finding Your Place Notary, LLC (FYPNL) and its commissioned notary are ONLY authorized to conduct the following acts:</p>
+      <ul class="scope-list">
+        <li><strong>Verify Identity:</strong> Check government-issued photo IDs to confirm the signer is who they claim to be.<img class="scope-img" src="tickdoneicon.jpeg" alt="Verified identity"></li>
+        <li><strong>Witness Signatures:</strong> Oversee the signing and initialing of documents with accurate dates in blue or black ink only unless otherwise specified.</li>
+        <li><strong>Notarize Documents:</strong> Administer oaths and complete official notarial acts with certificates, stamps, and/or seals.<img class="scope-img seal" src="notrialact.jpeg" alt="Notarial act official seal"></li>
+        <li><strong>Document Navigation:</strong> Indicate designated signature, date, or initial lines in strict accordance with document instructions.<img class="scope-img" src="signanddate.jpeg" alt="Sign and date"></li>
+      </ul>
+      <div class="lang-policy">
+        <h4>Mandatory Language Policy</h4>
+        <p>To comply with Virginia Notary standards, all signers must be able to communicate directly with the notary in English. We are unable to utilize third-party translators or interpreters.</p>
       </div>
     </div>
   </div>
@@ -441,6 +479,7 @@ details[open] summary::after{transform:rotate(-180deg)}
     <button class="back-btn" onclick="goHome()">← Back to Home</button>
     <h2>Book Appointment</h2>
     <div class="gold-line"></div>
+    <div class="va-notice">To comply with Virginia Notary standards, all signers must be able to communicate directly with the notary in English. We are unable to utilize third-party translators or interpreters.</div>
     <div class="booking-wrap">
       <div class="booking-info">
         <p>Select a date and time that works for you — weekday and Saturday slots available. For remote sessions, a secure video link will be sent upon confirmation.</p>
@@ -456,7 +495,7 @@ details[open] summary::after{transform:rotate(-180deg)}
         <div class="booking-agree-box">
           <label>
             <input type="checkbox" id="bookingPolicyCheck" onchange="toggleCalendly(this.checked)">
-            <span>I agree to the Legal &amp; Booking Policies: I understand that the Notary is not an attorney and cannot provide legal advice or assist with document selection. I agree to the fee schedule, including the $15 late/wait fee ($15 per 30 minutes for jail visits), the $50 Sunday fee, and acknowledge that my upfront deposit is non-refundable if the signing fails due to invalid ID, incomplete documents, or a signer's lack of capacity.</span>
+            <span>I understand that the notary is not an attorney and cannot provide legal advice. I certify that all signers can communicate directly with the notary in English, as Virginia law does NOT allow interpreters for core communication during notarizations. I agree to the cancellation, deposit, travel, and late fee policies.</span>
           </label>
         </div>
         <p class="calendly-hint" id="calendlyHint">Please check the box above to unlock the booking calendar.</p>
@@ -485,8 +524,8 @@ details[open] summary::after{transform:rotate(-180deg)}
       <div class="contact-form">
         <h3>Send a Message</h3>
         <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" placeholder="Julia"></div>
-          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Jones"></div>
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Enter First Name"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Enter Last Name"></div>
         </div>
         <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
         <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"></div>
@@ -505,7 +544,7 @@ details[open] summary::after{transform:rotate(-180deg)}
         <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your documents and any scheduling needs…"></textarea></div>
         <label class="form-agree">
           <input type="checkbox" id="contactPolicyCheck">
-          <span>I understand that the notary is not an attorney and cannot provide legal advice, and I agree to the cancellation, deposit, and late fee policies.</span>
+          <span>I understand that the notary is not an attorney licensed to practice law in the Commonwealth of Virginia, is not allowed to give legal advice or accept fees for legal advice. I certify that all signers can communicate directly with the notary in English, as Virginia law does NOT allow interpreters for core communication during notarizations. I agree to the cancellation, deposit, travel, and late fee policies.</span>
         </label>
         <button class="form-submit" onclick="submitContact(this)">Send Message</button>
       </div>
@@ -538,7 +577,7 @@ details[open] summary::after{transform:rotate(-180deg)}
       </details>
       <details>
         <summary>How much does notarization cost?</summary>
-        <div class="faq-answer">Fees vary by service type and travel distance for mobile appointments. Please see the Pricing &amp; Fees section for a full breakdown, or contact us directly for a custom quote.</div>
+        <div class="faq-answer">Standard notarial fees are set in accordance with Virginia statutory limits ($10 per traditional act / $25 per electronic RON act). Mobile travel fees, Sundays and holidays, facility scheduling, and wait times vary by distance and logistics. Please see our Pricing &amp; Fees page for a transparent, comprehensive breakdown or contact us directly for an upfront, and definite calculation regarding Sundays and holidays, travel distance, waiting fees, and cancellation fees.</div>
       </details>
       <details>
         <summary>Can you notarize documents for someone in a hospital or care facility?</summary>
@@ -620,7 +659,7 @@ details[open] summary::after{transform:rotate(-180deg)}
       <div class="policy-box">
         <h4>Important Booking &amp; Appointment Policies</h4>
         <ul>
-          <li><strong>Non-Refundable Deposit:</strong> A deposit is required upfront to secure your mobile appointment booking. This deposit is strictly <strong>non-refundable</strong> and will be forfeited if the notary arrives and the signing cannot proceed due to invalid/expired identification, missing signers, or incorrect/incomplete paperwork.</li>
+          <li><strong>Non-Refundable Deposit:</strong> A deposit is required upfront to secure your mobile appointment booking. This deposit is strictly <strong>non-refundable</strong> and will be forfeited if the notary arrives and the signing cannot proceed due to invalid/expired identification, missing signers, or unprepared, incorrect, or incomplete paperwork.</li>
           <li><strong>Grace Period &amp; Waiting Fees:</strong> Appointments start promptly at the scheduled time. A <strong>10-minute grace period</strong> is extended to all clients. If the client is more than 10 minutes late, a <strong>$15.00 waiting fee</strong> will be assessed to cover the notary's time.</li>
         </ul>
       </div>
@@ -636,6 +675,36 @@ details[open] summary::after{transform:rotate(-180deg)}
     <button class="back-btn" onclick="goHome()">← Back to Home</button>
     <h2>Legal Disclaimers</h2>
     <div class="gold-line"></div>
+    <div class="va-notice">To comply with Virginia Notary standards, all signers must be able to communicate directly with the notary in English. We are unable to utilize third-party translators or interpreters.</div>
+
+    <div class="disclaimer-block">
+      <h3>Finding Your Place Notary, LLC (FYPNL) is Not an Attorney</h3>
+      <p>Please be advised that FYPNL and its commissioned notary act solely as an impartial witness to verify identity<img class="disc-img inline-end" src="tickdoneicon.jpeg" alt="Verified identity"> and ensure that signings are willful. Therefore, the notary is not an attorney and cannot provide legal advice, which includes consulting, advising, interpreting specific clauses, or explaining legal jargon. FYPNL cannot assist with document selection, drafting, or altering documents. For all legal questions, one MUST actively consult a licensed attorney.<img class="disc-img inline-end" src="law.jpeg" alt="Law book"></p>
+      <p><strong>Please Note:</strong> In the event a signer appears to lack understanding or is not signing willfully, the notary reserves the right to refuse service without a refund.</p>
+    </div>
+
+    <div class="disclaimer-block">
+      <h3>FYPNL is Not a Loan Officer, Underwriter, or Financial Consultant</h3>
+      <img class="disc-img" src="identityverify.jpeg" alt="Financial consultation notice">
+      <p>FYPNL and its commissioned notary are NOT authorized to advise on or interpret financial terms, or provide opinions on whether a borrower should sign or agree to a loan. Nor will FYPNL provide an opinion on closing costs or interest rates. All financial questions MUST be directed to the loan officer or underwriter from the financial institution administering the loan product. If questions arise during the signing, either the signee(s) or the notary will reach out to the loan guarantor. However, documents cannot be altered by the notary. Loan terms, interest rates, or closing costs cannot be negotiated with or by FYPNL.</p>
+    </div>
+
+    <div class="disclaimer-block">
+      <h3>Authorized Services &amp; Scope of Authority</h3>
+      <p>Finding Your Place Notary, LLC (FYPNL) and its commissioned notary are ONLY authorized to conduct the following acts:</p>
+      <ul>
+        <li><strong>Verify Identity:</strong> Check government-issued photo IDs to confirm the signer is who they claim to be.<img class="disc-img" src="tickdoneicon.jpeg" alt="Identity verified"></li>
+        <li><strong>Witness Signatures:</strong> Oversee the signing and initialing of documents with accurate dates in blue or black ink only unless otherwise specified.</li>
+        <li><strong>Notarize Documents:</strong> Administer oaths and complete official notarial acts with certificates, stamps, and/or seals.<img class="disc-img seal" src="notrialact.jpeg" alt="Notarial act seal"></li>
+        <li><strong>Document Navigation:</strong> Indicate designated signature, date, or initial lines in strict accordance with document instructions.<img class="disc-img" src="signanddate.jpeg" alt="Sign and date flags"></li>
+        <li><strong>Handle Logistics:</strong> Print the document package, travel to and from the client, and finally securely expedite the signed paperwork in accordance with the terms and conditions of the agreement as instructed by the financial institution and/or title company.<img class="disc-img" src="caricon.jpeg" alt="Mobile document logistics"></li>
+      </ul>
+    </div>
+
+    <div class="disclaimer-block">
+      <h3>Mandatory Language Policy</h3>
+      <p>To comply with Virginia Notary standards, all signers must be able to communicate directly with the notary in English. We are unable to utilize third-party translators or interpreters.</p>
+    </div>
 
     <div class="disclaimer-block">
       <h3>Important Appointment Requirements &amp; Legal Notice</h3>
@@ -650,15 +719,9 @@ details[open] summary::after{transform:rotate(-180deg)}
       </ul>
     </div>
 
-    <div class="disclaimer-block">
-      <h3>Notary Is Not an Attorney</h3>
-      <p>Finding Your Place Notary, LLC and its commissioned notary provide notarization services only. The notary is not an attorney, cannot provide legal advice, cannot assist with document selection, and cannot help you fill out or interpret legal forms. For legal questions, please consult a licensed attorney.</p>
-    </div>
-
     <button class="booking-pill-btn" onclick="showSection('appointment')">Book An Appointment</button>
   </div>
 </div>
-
 <script>
 // Embed logo as base64
 (function(){
