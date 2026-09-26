@@ -273,11 +273,11 @@ details[open] summary::after{transform:rotate(-180deg)}
 .scope-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin:0 0 22px}
 .scope-list li{font-size:0.92rem;line-height:1.65;color:rgba(255,255,255,0.92)}
 .scope-list strong{color:#e0d0a0}
-.scope-img{display:block;margin-top:10px;height:72px;width:72px;object-fit:contain;background:transparent;padding:0}
-.scope-img.seal{height:140px;width:140px}
+.scope-img{display:block;margin-top:10px;height:72px;width:72px;object-fit:contain;object-position:left center;background:transparent;padding:0}
+.scope-img.seal{height:140px;width:140px;object-position:left center;margin-left:0}
 .inline-law{height:28px;width:auto;vertical-align:middle;margin-left:6px;display:inline-block}
-.disc-img{display:block;margin:12px 0 8px;height:80px;width:80px;object-fit:contain;background:transparent;padding:0}
-.disc-img.seal{height:150px;width:150px}
+.disc-img{display:block;margin:12px 0 8px;height:80px;width:80px;object-fit:contain;object-position:left center;background:transparent;padding:0}
+.disc-img.seal{height:150px;width:150px;object-position:left center;margin-left:0}
 .disc-img.inline-end{display:inline-block;height:36px;width:36px;vertical-align:middle;margin:0 0 0 8px;padding:0;background:transparent}
 .lang-policy{margin-top:8px;padding-top:16px;border-top:1px solid rgba(201,168,76,0.35)}
 .lang-policy h4{color:#e0d0a0;font-size:1rem;margin-bottom:8px;letter-spacing:0.3px}
@@ -762,3 +762,5 @@ document.addEventListener('DOMContentLoaded',function(){
   if(hint) hint.style.display='block';
 });
 </script>
+</body>
+</html>
